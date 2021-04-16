@@ -1,0 +1,82 @@
+:root {
+	--barva: gold;
+	--zvyraznene: red;
+}
+
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+	background-blend-mode: multiply,multiply;
+}
+
+h1 {
+	font: 60px/1 'Paytone One', sans-serif;
+	margin-top: 0;
+	color: var(--barva);
+	text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.farma {
+	max-width: 960px;
+	margin: 0 auto;
+	/*display: grid;*/
+	/*grid-template-columns: repeat(6, 1fr);*/
+	/*grid-gap: 20px;*/
+	display: flex;
+	justify-content: center;
+}
+
+.zvire {
+	position: relative;
+	flex: 0 0 150px;
+	margin: 0 20px;
+}
+
+.foto {
+	width: 100%;
+	border-radius: 50%;
+	border: 3px solid var(--barva);
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+	transition: none;
+}
+
+.jmeno {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 7px 13px;
+	font: 18px/1 'Paytone One', sans-serif;
+	font-weight: bold;
+	text-align: center;
+	color: #13547a;
+	background-color: var(--barva);
+	border-radius: 5px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hraje .foto {
+	border-color: var(--zvyraznene);
+}
+
+.hraje .jmeno {
+	background-color: var(--zvyraznene);
+	color: white;
+}
